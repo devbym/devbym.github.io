@@ -11,12 +11,16 @@ header {
   padding: 15px;
   text-align: center;
 }
-.menu {
+nav navgroup {
+  border:1px solid red;
+}
+
+nav {
   float: left;
   width: 20%;
   text-align: center;
 }
-.menu a {
+nav a {
   background-color: #dddddd;
   padding: 8px;
   margin-top: 7px;
@@ -45,7 +49,7 @@ footer {
 
 @media only screen and (max-width: 620px) {
   /* For mobile phones: */
-  .menu,
+  nav,
   .main,
   .right {
     width: 100%;
