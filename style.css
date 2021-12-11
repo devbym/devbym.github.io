@@ -7,6 +7,7 @@
 body {
   font-family: "Segoe UI", Verdana, sans-serif;
   color: #111;
+    max-width: 1280px;
 }
 :any-link {
   color: black;
@@ -16,17 +17,13 @@ body {
   box-sizing: border-box;
 }
 header {
-  background-color: #dddddd;
-  padding: 15px;
+  padding: 2em;
   text-align: center;
-}
-.main {
-  position: relative;
-  max-width: 1280px;
-  margin: auto;
+  display:block;
 }
 
 section {
+    position: relative;
   width: 80%;
   display: grid;
   grid-template-columns: repeat(autofill, minmax(3em, 100%));
@@ -76,23 +73,18 @@ img {
   display: inline-flex;
 }
 
-nav navgroup {
-  border: 1px solid red;
-}
-
 nav {
   position: absolute;
   top:2em;
   left:1em;
-  width: 8em;
-  text-align: center;
+  width: 4em;
 }
 nav a {
   background-color: #dddddd;
   padding: 8px;
   margin-top: 7px;
   display: block;
-  width: 100%;
+  width: 4em;
 }
 .main {
   display: block;
@@ -115,6 +107,10 @@ footer {
   position: static;
   bottom: 0;
   left: 0;
+}
+
+footer>img {
+  width:100%;
 }
 
 @media only screen and (max-width: 620px) {
