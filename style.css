@@ -35,18 +35,18 @@ section {
   justify-content: space-around;
   align-content: stretch;
 }
-.container > * {
+section > * {
   background: #ddd;
   line-height: 1.2;
   color: black;
 }
-.container > .H {
+section > .H {
   align-self: start;
   grid-column: 1/4;
   text-align: center;
 }
 
-.container > .F {
+section > .F {
   align-self: end;
   grid-column: 1/4;
   height: 3em;
@@ -54,17 +54,17 @@ section {
 }
 
 /* For presentation only, no need to copy the code below */
-.container .R {
+section .R {
   border: 0px solid green;
   display: inline-flex;
 }
-.container .R > * {
+section .R > * {
   display: block;
   padding: 0.2em;
   overflow: hidden;
 }
 
-.container .R:hover {
+section .R:hover {
   background: rgba(121, 121, 121, 0.4);
 }
 
