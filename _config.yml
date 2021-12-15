@@ -1,6 +1,7 @@
 theme: Tactile
 title: Devbym on Github - going into 2022
 description: Personal website
+show_downloads: true
 
 ---
 layout: post
