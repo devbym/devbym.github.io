@@ -54,7 +54,7 @@ section > .F {
 section .R {
   border: 0px solid green;
   display: inline-flex;
-  height: min-content;
+  height: 100%;
 }
 section .R > * {
   display: block;
