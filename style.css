@@ -90,13 +90,13 @@ nav {
 
 }
 
-nav.fa:hover nav,nav:hover nav>a{
+nav.fa:hover nav,nav:hover nav a{
   display:block;
   width:8em;
   height: max-content;
 }
 nav a {
-  background-color: #ddd;
+  background-color: #ccc;
   padding: 1em;
   margin-top: 0.5em;
   display: none;
