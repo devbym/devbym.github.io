@@ -70,8 +70,9 @@ section .R:hover {
 
 img {
   width: 100%;
-  max-width: 480px;
+  max-width: 240px;
   display: inline-flex;
+  margin: auto;
 }
 
 nav {
