@@ -6,6 +6,9 @@ show_downloads: true
 ---
 layout: post
 title: Blogs
+permalink: /blog
+--- 
+
 
 myKey: myValue
 CustomKeys: Set Custom keys 
