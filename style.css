@@ -90,7 +90,6 @@ section article.large {
 }
 
 details {
-  background: aliceblue;
   margin: auto;
   text-align: center;
   font-family: "Open Sans", sans-serif;
@@ -108,6 +107,8 @@ details > :not(summary):hover {
 }
 
 details > :not(summary) {
+  background: aliceblue;
+  padding:1em;
   margin: 1em 2.5em;
 }
 
