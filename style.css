@@ -28,6 +28,7 @@ body {
 
 header {
   text-align: center;
+  position: sticky;
 }
 
 header > * {
@@ -59,7 +60,8 @@ img {
 nav {
   width: 90vw;
   margin: auto;
-  max-height: 4em;
+  /*! max-height: 4em; */
+  position: unset;
 }
 
 nav:target {
@@ -93,13 +95,15 @@ details {
   margin: auto;
   text-align: center;
   font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 details summary {
   position: absolute;
   top: 1em;
   left: 1em;
   max-width: 12em;
-  margin: auto;
+  /*! margin: auto; */
 }
 details > :not(summary):hover {
   color: crimson;
@@ -108,8 +112,8 @@ details > :not(summary):hover {
 
 details > :not(summary) {
   background: aliceblue;
-  padding:1em;
-  margin: 1em 2.5em;
+  padding:.5em;
+  margin: .5em 1em;
 }
 
 footer {
