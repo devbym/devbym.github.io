@@ -58,10 +58,8 @@ img {
 }
 
 nav {
-  width: 90vw;
-  margin: auto;
-  /*! max-height: 4em; */
-  position: unset;
+  position: absolute;
+  top: 0;
 }
 
 nav:target {
@@ -92,17 +90,24 @@ section article.large {
 }
 
 details {
-  margin: auto;
   text-align: center;
   font-family: "Open Sans", sans-serif;
-  display: flex;
-  flex-direction: column;
+  height: 20vh;
+  /*! top: 0; */
+  position: absolute;
+  width: 100vw;
+  left: 0;
 }
+details[open] {
+  background: white;
+  padding: 4em;
+}
+
 details summary {
   position: absolute;
   top: 1em;
   left: 1em;
-  max-width: 12em;
+  /*! max-width: 12em; */
   /*! margin: auto; */
 }
 details > :not(summary):hover {
