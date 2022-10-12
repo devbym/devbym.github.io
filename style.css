@@ -52,9 +52,10 @@ span {
 
 img {
   width: 100%;
-  max-width: 1fr;
   margin: auto;
+  height: auto;
   display: inline-flex;
+  object-fit: fill;
 }
 
 nav {
@@ -78,7 +79,8 @@ section article {
   border-radius: 0.4em;
   grid-column: span 1;
   grid-row: span 1;
-  padding: 0.4em;
+  margin: 0.25em;
+  border: 1px solid white;
 }
 section article:empty {
   display: none;
@@ -89,18 +91,29 @@ section article.large {
   grid-column: span 2;
 }
 
+
+h4 {
+  background: azure;
+  margin:  auto;
+  padding: .5em;
+  border-radius: 3px;
+}
+article p {
+  margin: .25em;
+}
+details a {
+  padding: 1em;
+}
+
 details {
   text-align: center;
   font-family: "Open Sans", sans-serif;
-  height: 20vh;
-  /*! top: 0; */
   position: absolute;
   width: 100vw;
-  left: 0;
 }
 details[open] {
   background: white;
-  padding: 4em;
+  padding: 20vh;
 }
 
 details summary {
@@ -116,9 +129,8 @@ details > :not(summary):hover {
 }
 
 details > :not(summary) {
-  background: aliceblue;
-  padding:.5em;
-  margin: .5em 1em;
+  background: azure;
+  margin: .5em 2em;
 }
 
 footer {
