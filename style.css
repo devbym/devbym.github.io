@@ -31,7 +31,7 @@ header {
   position: sticky;
 }
 
-header > * {
+header>* {
   padding: 0.2em;
   letter-spacing: 2px;
 }
@@ -41,6 +41,7 @@ main {
   margin: auto;
   margin-top: 2em;
 }
+
 main * {
   line-height: 1.2;
   color: black;
@@ -72,6 +73,7 @@ section {
   place-items: unset;
   flex-flow: wrap-reverse;
 }
+
 section article {
   background: #d2d2d2;
   box-shadow: 0 -0.3em 0.2em rgba(225, 225, 225, 0.2) inset;
@@ -81,51 +83,57 @@ section article {
   min-height: 8em;
   min-width: 20%;
 }
+
 section article:empty {
   display: none;
   visibility: hidden;
 }
+
 section article.large {
   grid-row: span 2;
   grid-column: span 2;
 }
 
 
-article h4 {
+section article h4 {
   background: azure;
-  margin:  auto;
+  margin: auto;
   padding: .5em;
   border-radius: 3px;
 }
-article p {
+
+section article p {
   margin: .25em;
 }
-details a {
+
+nav details a {
   padding: 1em;
 }
 
-details {
+nav details {
   text-align: center;
   font-family: "Open Sans", sans-serif;
   position: absolute;
   width: 100vw;
 }
-details[open] {
+
+nav details[open] {
   background: white;
   padding: 20vh;
 }
 
-details summary {
+nav details summary {
   position: absolute;
   top: 1em;
   left: 1em;
 }
-details > :not(summary):hover {
+
+nav details> :not(summary):hover {
   color: crimson;
-  background:whitesmoke;
+  background: whitesmoke;
 }
 
-details > :not(summary) {
+nav details> :not(summary) {
   background: azure;
   margin: .5em 2em;
 }
@@ -149,7 +157,7 @@ footer * {
   }
 
   header,
-footer {
+  footer {
     grid-column: span 2;
   }
 }
