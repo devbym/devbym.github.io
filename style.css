@@ -67,11 +67,11 @@ nav:target {
 }
 
 section {
-  display: flex;
-  gap: 1em;
-  flex-flow: row wrap;
-  place-items: unset;
-  flex-flow: wrap-reverse;
+  display: grid;
+  gap: .25em;
+  grid-auto-flow: row;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: masonry;
 }
 
 section article {
@@ -79,9 +79,8 @@ section article {
   box-shadow: 0 -0.3em 0.2em rgba(225, 225, 225, 0.2) inset;
   border-radius: 0.4em;
   border: 1px solid #a49696;
-  flex: 2 3 min-content;
   min-height: 8em;
-  min-width: 20%;
+  max-width: 100%;
 }
 
 section article:empty {
@@ -116,6 +115,14 @@ section article ul li {
   padding: .5em;
   background: linen;
   margin: .25em;
+}
+
+section article ul li:hover {
+  background: whitesmoke;
+}
+
+section article ul li:hover a {
+  color: crimson;
 }
 
 nav details a {
