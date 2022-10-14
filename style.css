@@ -106,6 +106,18 @@ section article p {
   margin: .25em;
 }
 
+section article ul {
+  list-style: none;
+  margin: auto;
+  padding: 0;
+}
+
+section article ul li {
+  padding: .5em;
+  background: linen;
+  margin: .25em;
+}
+
 nav details a {
   padding: 1em;
 }
