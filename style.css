@@ -52,9 +52,9 @@ span {
 }
 
 img {
-  width: auto;
+  width: 100%;
   margin: auto;
-  height: fit-content;
+  display: inline-flex;
 }
 
 nav {
@@ -69,18 +69,19 @@ nav:target {
 section {
   display: grid;
   gap: .25em;
-  grid-auto-flow: row;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-flow: dense;
+  grid-template-columns: auto auto auto;
   grid-template-rows: masonry;
 }
 
 section article {
   background: #d2d2d2;
-  box-shadow: 0 -0.3em 0.2em rgba(225, 225, 225, 0.2) inset;
+  box-shadow: 0.15em 0.3em rgb(221, 229, 245);
   border-radius: 0.4em;
-  border: 1px solid #a49696;
+  border: 1px solid rgb(221, 229, 245);
   min-height: 8em;
-  max-width: 100%;
+  min-width: 20%;
+}
 }
 
 section article:empty {
@@ -101,7 +102,8 @@ section article h4 {
   border-radius: 3px;
 }
 
-section article p {
+section article p,
+section article span {
   margin: .25em;
 }
 
@@ -115,6 +117,7 @@ section article ul li {
   padding: .5em;
   background: linen;
   margin: .25em;
+  cursor: pointer;
 }
 
 section article ul li:hover {
@@ -138,7 +141,7 @@ nav details {
 
 nav details[open] {
   background: white;
-  padding: 20vh;
+  padding: 3.2em;
 }
 
 nav details summary {
@@ -159,13 +162,15 @@ nav details> :not(summary) {
 
 footer {
   display: flex;
-  max-height: 4em;
-  background-color: #d2d2d2;
+  height: 4em;
+  background-color: #ddd;
+  margin: auto;
   margin-top: 1em;
 }
 
 footer * {
-  max-height: 3em;
+  height: 3em;
+  padding: .5em;
 }
 
 @media only screen and (max-width: 900px) {
