@@ -31,7 +31,7 @@ header {
   position: sticky;
 }
 
-header > * {
+header>* {
   padding: 0.2em;
   letter-spacing: 2px;
 }
@@ -41,6 +41,7 @@ main {
   margin: auto;
   margin-top: 2em;
 }
+
 main * {
   line-height: 1.2;
   color: black;
@@ -52,16 +53,13 @@ span {
 
 img {
   width: 100%;
-  max-width: 1fr;
   margin: auto;
   display: inline-flex;
 }
 
 nav {
-  width: 90vw;
-  margin: auto;
-  /*! max-height: 4em; */
-  position: unset;
+  position: absolute;
+  top: 0;
 }
 
 nav:target {
@@ -70,61 +68,109 @@ nav:target {
 
 section {
   display: grid;
-  grid-gap: 1em;
-  grid-template-columns: 1fr 1fr 1fr;
-  background: none;
+  gap: .25em;
+  grid-auto-flow: dense;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: masonry;
 }
+
 section article {
   background: #d2d2d2;
-  box-shadow: 0 -0.3em 0.2em rgba(225, 225, 225, 0.2) inset;
+  box-shadow: 0.15em 0.3em rgb(221, 229, 245);
   border-radius: 0.4em;
-  grid-column: span 1;
-  grid-row: span 1;
-  padding: 0.4em;
+  border: 1px solid rgb(221, 229, 245);
+  min-height: 8em;
+  min-width: 20%;
 }
+}
+
 section article:empty {
   display: none;
   visibility: hidden;
 }
+
 section article.large {
   grid-row: span 2;
   grid-column: span 2;
 }
 
-details {
+
+section article h4 {
+  background: azure;
   margin: auto;
+  padding: .5em;
+  border-radius: 3px;
+}
+
+section article p,
+section article span {
+  margin: .25em;
+}
+
+section article ul {
+  list-style: none;
+  margin: auto;
+  padding: 0;
+}
+
+section article ul li {
+  padding: .5em;
+  background: linen;
+  margin: .25em;
+  cursor: pointer;
+}
+
+section article ul li:hover {
+  background: whitesmoke;
+}
+
+section article ul li:hover a {
+  color: crimson;
+}
+
+nav details a {
+  padding: 1em;
+}
+
+nav details {
   text-align: center;
   font-family: "Open Sans", sans-serif;
-  display: flex;
-  flex-direction: column;
+  position: absolute;
+  width: 100vw;
 }
-details summary {
+
+nav details[open] {
+  background: white;
+  padding: 3.2em;
+}
+
+nav details summary {
   position: absolute;
   top: 1em;
   left: 1em;
-  max-width: 12em;
-  /*! margin: auto; */
-}
-details > :not(summary):hover {
-  color: crimson;
-  background:whitesmoke;
 }
 
-details > :not(summary) {
-  background: aliceblue;
-  padding:.5em;
-  margin: .5em 1em;
+nav details> :not(summary):hover {
+  color: crimson;
+  background: whitesmoke;
+}
+
+nav details> :not(summary) {
+  background: azure;
+  margin: .5em 2em;
 }
 
 footer {
   display: flex;
-  max-height: 4em;
-  background-color: #d2d2d2;
+  height: 4em;
+  background-color: #ddd;
+  margin: auto;
   margin-top: 1em;
 }
 
 footer * {
-  max-height: 3em;
+  height: 3em;
+  padding: .5em;
 }
 
 @media only screen and (max-width: 900px) {
@@ -135,7 +181,7 @@ footer * {
   }
 
   header,
-footer {
+  footer {
     grid-column: span 2;
   }
 }
