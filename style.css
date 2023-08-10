@@ -43,6 +43,7 @@ img {
   width: 100%;
   margin: auto;
   display: inline-flex;
+  object-fit: scale-down;
 }
 
 nav {
@@ -59,15 +60,15 @@ section {
   grid-auto-flow: dense;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: masonry;
+  background: url("https: //images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80    ");
 }
 
 article {
   background: #d2d2d2;
-  box-shadow: 0.15em 0.1em rgb(205, 208, 213);
+  box-shadow: 0.15em 0.1em rgba(205, 208, 213, 0.2);
   border-radius: 0.4em;
   border: 1px solid rgb(230, 233, 238);
   margin-bottom: 0.25em;
-  padding-bottom: 0.5em;
 }
 article:empty {
   display: none;
@@ -79,21 +80,25 @@ article + .large {
 }
 article > header {
   display: grid;
-  grid-template-columns: 8fr 1fr;
-  grid-template-rows: 2em;
+  grid-template-columns: 8fr 2em;
   background: seashell;
-  max-height: 2em;
-  margin-bottom: 0.25em;
   border-radius: 0.4em;
-  border: 1px solid lightgrey;
+  border: 1px solid lightyellow;
+  text-indent: 0.25em;
+  align-items: center;
 }
-article > header * {
+article * {
   text-align: left;
-  margin: auto 0.25em;
+  margin: 0;
   padding: 0;
+  border-radius: 0.4em;
 }
-article > header img,
-article > header svg {
+article img {
+  width: 100%;
+  place-self: center;
+  object-fit: contain;
+}
+article svg {
   width: 2em;
   display: flex;
   place-self: end;
@@ -102,9 +107,9 @@ article > header svg {
 }
 article > h2,
 article > h4 {
-  padding: 0 0.5em;
-  margin: 1em auto;
-  background: linen;
+  padding: 0.25em;
+  margin: 0;
+  background: none;
 }
 article p,
 article span,
@@ -112,34 +117,44 @@ article a {
   margin: 0.5em 0.25em;
   padding: 0;
 }
-
-ul {
+article ul {
   list-style: none;
   margin: auto;
   padding: 0;
   gap: 0.5em;
 }
-ul li {
+article ul li,
+article ul a {
   padding: 0.5em;
   background: bisque;
   margin: 0.25em;
+}
+article ul > a {
   cursor: pointer;
+  position: relative;
+  display: block;
 }
-ul li:hover {
+article ul > a:hover {
   background: whitesmoke;
-}
-ul li:hover a {
   color: crimson;
 }
 
 nav a {
   padding: 1em;
 }
+nav img {
+  display: inline-flex;
+}
+nav img.nav-open-icon {
+  max-width: 2em;
+  cursor: pointer;
+}
 nav details {
   text-align: center;
   font-family: "Open Sans", sans-serif;
   position: absolute;
   width: 100vw;
+  transition: all 0.4s ease-in-out;
 }
 nav details[open] {
   background: white;
@@ -149,6 +164,10 @@ nav details summary {
   position: absolute;
   top: 1em;
   left: 1em;
+  list-style-type: none;
+}
+nav details summary ::marker {
+  display: none;
 }
 nav details > :not(summary):hover {
   color: crimson;
@@ -164,6 +183,7 @@ footer {
   max-height: 3em;
   background-color: #ddd;
   margin-top: 1em;
+  align-content: space-evenly;
 }
 footer * {
   margin: 0 auto;
