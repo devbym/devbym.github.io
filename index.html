@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="dark">
 <title>Devbym on Github.io</title>
 
 <head>
@@ -12,23 +12,48 @@
 </head>
 
 <body>
-  <header>
-    <h1>devbym</h1>
-    <span>
-      Welcome to my page.
-    </span> 
-  </header>
-  <nav>
+  <nav class="droptop">
     <details>
-      <summary><img src="https://www.svgrepo.com/show/532195/menu.svg" alt="" class="nav-open-icon" title="Open menu">
+      <summary title="Open menu">
+        <svg viewBox="0 0 64 64" class="nav-open-icon" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-width="10" stroke-linecap="round" d="M 10 16 L 54 16 M 10 32 L 54 32 M 10 48 L 54 48"></path>
+        </svg>
       </summary>
+
+      <a href="wiki.html">Wiki</a>
       <a href="https://codepen.io/devbym">Codepen.io</a>
       <a href="https://github.com/devbym">Github profile</a>
       <a href="https://www.youtube.com/channel/UCO1AZN9FDVN_baAXovdBSYA/playlists" target="_blank">Youtube
         Playlists</a>
-
     </details>
   </nav>
+  <header>
+    <h1>devbym</h1>
+    <span>
+      Welcome to my page.
+    </span>
+    <button class="theme-toggle" id="theme-toggle" title="Toggles light &amp; dark" aria-label="light">
+      <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+        <mask class="moon" id="moon-mask">
+          <rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
+          <circle cx="24" cy="10" r="6" fill="black"></circle>
+        </mask>
+        <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" stroke="currentColor" fill="currentColor">
+        </circle>
+        <g class="sun-beams" stroke="currentColor" fill="#111111">
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </g>
+      </svg>
+    </button>
+  </header>
+
   <main>
     <section>
       <article>
@@ -37,13 +62,30 @@
           <img src="https://www.svgrepo.com/show/355933/user-circle.svg" alt="">
         </header>
         <ul>
-          <li>A human writing code for machines - Since 2018</li>
-          <li>Studying Python 3 and web-oriented languages.</li>
-          <li>Based in Central Europe 🇨🇿
+          <li>
+            <p>🧍‍♂️ A kind human writing code for machines - Since 2018</p>
+          </li>
+          <li>
+            <p>📍 Based in Central Europe 🇨🇿</p>
+          </li>
+          <li>
+            <p>
+              ✔ Python 3
+            </p>
+            <p>
+              ✔ HTML/CSS/JS: I have a weak spot for pure HTML & CSS. Javascript only where it is essential. 
+            </p>
+            <p>
+              ✔ Shell/Bash
+            </p>
+
+          </li>
+          <li>
+        <img src="https://www.w3schools.com/howto/img_avatar.png">
+
           </li>
         </ul>
 
-        <img src="https://www.w3schools.com/howto/img_avatar.png">
         <img src="https://www.codewars.com/users/devbym/badges/large" alt="CodeWars Badge" />
 
       </article>
@@ -137,8 +179,13 @@
           <a href="https://www.w3.org/2009/cheatsheet/" target="_blank">W3C Web Cheatsheet</a>
           <a href="https://csp-evaluator.withgoogle.com/" target="_blank" rel="noopener noreferrer">Content Security
             Policy Evaluator</a>
-          <a href="https://www.svgrepo.com/" target="_blank">SVG Repo</a>
-          <a href="https://vectormaker.co/" target="_blank">Vectormaker</a>
+        </ul>
+        <h4>SVG</h4>
+        <ul>
+          <a href="https://codepen.io/collection/NqqNdW" target="_blank" rel="noopener noreferrer">Codepen SVG collection</a>
+          <label for="">Vectorize PNG or JPEG images</label><a title="Vectorize PNG or JPEG images" href="https://vectormaker.co/" target="_blank" rel="noopener noreferrer">Vectormaker</a>
+          <label for="">Repository of icons and tools</label><a title="Repository of icons and tools" href="https://www.svgrepo.com/" target="_blank" rel="noopener noreferrer">SVG Repo</a>
+<label for="">Backgrounds and other SVG things</label><a href="https://www.svgbackgrounds.com/" target="_blank" rel="noopener noreferrer">SVG Backgrounds</a>
         </ul>
       </article>
       <article class=" dflex">
@@ -146,11 +193,12 @@
           <h2>Icons: SVG & Others</h2>
         </header>
 
-        <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Git_format.png/640px-Git_format.png"
+        <img class="icon"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Git_format.png/640px-Git_format.png"
           alt="github logo">
         <img class="icon" src="https://www.svgrepo.com/show/520649/codepen.svg" alt="Codepen logo">
         <img class="icon" src="https://www.svgrepo.com/show/452091/python.svg" alt="python logo">
-        <svg class='icon' viewBox="0 0 16 16" >
+        <svg class='icon' viewBox="0 0 16 16">
           <path fill-rule="evenodd"
             d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
           </path>
