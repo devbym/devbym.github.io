@@ -194,7 +194,7 @@ article ul a {
 }
 article ul label {
   padding: 1ch;
-  background: #334555;
+  display: block;
 }
 article ul > a {
   cursor: pointer;
@@ -374,6 +374,10 @@ footer {
 }
 [data-theme=dark] article ul {
   background: #333;
+}
+[data-theme=dark] article ul label {
+  background: #334555;
+  color: #EEE;
 }
 [data-theme=dark] article ul li,
 [data-theme=dark] article ul a {

@@ -253,7 +253,7 @@ article {
 
         label {
             padding: 1ch;
-            background:#334555;
+            display: block;
         }
 
         >a {
@@ -478,6 +478,11 @@ stroke: lightgrey;
 
             background: #333;
 
+            label {
+            background: #334555;
+            color: #EEE;
+
+            }
             li,
             a {
                 background: inherit;
