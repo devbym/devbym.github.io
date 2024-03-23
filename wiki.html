@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html data-theme="dark">
+<title>Devbym on Github.io</title>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="devbym.github.io" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="app.js" type="text/javascript"></script>
+  <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">Home</a>
+        <h1>devbym</h1>
+        <h2>Wiki</h2>
+    </header>
+    <nav class="wiki">
+        <h2>Navigation</h2>
+        <div class="contents">
+
+            <a href="#SVG">SVG</a>
+            <a href="#CSS">CSS</a>
+        </div>
+    </nav>
+    <main>
+        <section class="wiki">
+            <article id="SVG">
+                <header>
+
+                    <h2>SVG wiki</h2>
+                    </header>
+                    <ul class="wiki">
+                        <li>SVG offers a large variety of ways to draw lines, shapes and patterns. It can draw, display, merge or manipulate images with formats such as <i>png, jpeg,gif,tiff, </i> and other media. SVG offers a variety of methods to achieve
+                            <ul>
+                                <li>SVG can be viewed as standalone XML</li>
+                                <li>XML can be embedded inside HTML documents</li>
+                                <li>It is fully supported within HTML / CSS and JS and the DOM</li>
+                            </ul>
+                  </li>
+                        <li>Image media defined in SVG are vector-based and therefore fully scalable and adaptable without any compromise on quality or color. </li>
+                        <li>It is also widely supported across browsers.</li>
+                    </ul>
+                    <details>
+                        <summary>
+SVG in HTML
+
+                        </summary>
+                        <ul class="wiki">
+                            <li><h4>Namespace</h4>When we want to include SVG media inside HTML (embedded or drawn), we must declare a <b>namespace</b> for the XML specification. This namespace only has to be declared once in the document body. After the first declaration all other SVG elements on the page will use that same namespace</li>
+                            <li><h4>Style attributes</h4> Most of the SVG style attributes can be declared in CSS in case of direct SVG drawing using &lt; path &gt;, not when SVG image is used to display an external image</li>
+                            <li><h4>Scaling</h4>If we want the SVG to scale itself, we must define a viewBox in the attributes as follows viewBox='<i>x y w h</i>'</li>
+                    
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>
+                            SVG &lt;image&gt;
+                        </summary>
+                        
+                        <ul class="wiki">
+                            <li>The SVG <i>image</i> element allows for raster images to be rendered within an SVG object.</li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </details>
+                    <details>
+                        <summary>SVG  &lt;path&gt;</summary>
+                        <ul>
+                            <h3>SVG possibilities</h3>
+                            <li>SVG path allows us to draw a vector image using straight lines
+                                
+                            </li>
+                            <li>
+                                M <i>x y</i> : Move To - Defines the starting point for the drawing cursor
+                                
+                            </li>
+                            <li>
+                                L <i>x y</i> : Line To - Draws a line to the defined point. ( line from M to L )
+                                
+                            </li>
+                            <li>H <i>x</i> : Horizontal Line - Draws a horizontal line from the current point to <i>x</i> </li>
+                            <li>V </li>
+                            <li>Z : Close Path - Draws a line from the last point back to the first point of the path.</li>
+                            <li>C : Cubic Bezier - Draws a cubic Bezier curve from the current point to (x,y) using (x1,y1) as the control point at the beginning of the curve and (x2,y2) as the control point at the end of the curve. Multiple sets of coordinates may be specified to draw a polybezier. </li>
+                        </ul>
+<a href="/Users/michiel/Development/Repositories/devbym.github.io"></a>                    </details>
+                    <details>
+                        <summary>SVG tricks</summary>
+                        <ul>
+                            <li><h4>Use CSS classes to apply complex styles</h4>
+                                If you are applying multiple attributes to a single element, the characters can add up. However, the moment you apply that complex class to multiple elements, you start to see savings. However, keep in mind CSS doesn’t work inside Data URIs.</li>
+                                <li><h4>Group elements with the same styles</h4>
+                                    If you have three elements that all have a fill of purple, you could simply wrap them in a group tag and only need one fill attribute to affect all three elements. This can work for most attributes and even with CSS classes.</li>
+                        </ul>
+                    </details>
+            </article>
+            <article id="CSS">
+                <header>
+                    <h2>CSS Wiki</h2>
+                </header>
+                <ul class="wiki">
+                    <li>When you take actions across the internet, we'll provide links to that activity here. </li>
+                    <li>Logical properties: block-size & inline-size</li>
+                    <li>Transitions</li>
+                    <li>Animations</li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">MDN CSS Reference</a></li>
+                </ul>
+                <aside>
+<iframe src="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Gradients#center_and_focal_point" sandbox="allow-scripts" frameborder="0"></iframe>
+                    <p></p>
+                </aside>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <span>Copyright - Devbym 2021</span>
+      </footer>
+</body>
+</html>
