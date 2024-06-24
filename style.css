@@ -93,13 +93,13 @@ img {
 }
 
 section {
-  width: 80%;
+  width: 100%;
   margin: auto;
-  gap: 2ch;
+  gap: 1ch;
   display: grid;
   grid-auto-flow: dense;
   grid-template-columns: auto auto auto;
-  grid-template-rows: minmax(10ch, auto);
+  grid-template-rows: masonry;
   overflow: auto;
 }
 section.wiki {
